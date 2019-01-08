@@ -6,6 +6,7 @@ namespace AppBundle\Controller;
 use AppBundle\Event\FunEvent;
 
 # we also need to `use` something implementing EventDispatcherInterface
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 # all the other standard `use` statements here
@@ -14,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
   /**
    * @Route("/", name="homepage")
