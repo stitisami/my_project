@@ -1,0 +1,17 @@
+bm_backup_manager:
+    database:
+        development:
+            type: mysql
+            host: localhost
+            port: 3306
+            user: root
+            pass: 
+            database: sylius_dev
+            ignoreTables: ['foo', 'bar']
+            
+            # If DSN is specified, it will override other values
+            dsn: 'mysql://root:root_pass@127.0.0.1:3306/sylius_dev'
+    storage:
+        local:
+            type: Local
+            root: /web/
